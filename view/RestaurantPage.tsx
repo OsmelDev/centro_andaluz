@@ -1,6 +1,6 @@
+import RestaurantHero from '@/components/restaurant/RestaurantHero'
+import RestaurantMain from '@/components/restaurant/RestaurantMain'
 import React from 'react'
-import RestaurantHero from './RestaurantHero'
-import RestaurantMain from './RestaurantMain'
 
 const RestaurantPage = () => {
   return (

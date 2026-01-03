@@ -1,9 +1,9 @@
-import Auth from '@/view/Auth'
+import RestaurantPage from '@/view/RestaurantPage'
 import React from 'react'
 
 const page = () => {
   return (
-    <Auth/>
+   <RestaurantPage />
   )
 }
 

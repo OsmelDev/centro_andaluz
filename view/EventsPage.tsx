@@ -1,15 +1,14 @@
 "use client"
 
+import { DayTabs } from "@/components/events/DayTabs"
+import { EmptyDay } from "@/components/events/EmptyDay"
+import { EventCard } from "@/components/events/EventCard"
+import { Hero } from "@/components/events/Hero"
+import { HorizontalEventCard } from "@/components/events/HorizontalEventCard"
 import { useState } from "react"
-import { Header } from "./Header"
-import {Hero} from "./Hero"
-import { DayTabs } from "./DayTabs"
-import { EventCard } from "./EventCard"
-import { HorizontalEventCard } from "./HorizontalEventCard"
-import { EmptyDay } from "./EmptyDay"
 
 
-export default function WeekEvents() {
+export default function EventsPage() {
   const [selectedDay, setSelectedDay] = useState("martes")
 
   return (

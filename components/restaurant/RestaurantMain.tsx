@@ -1,4 +1,5 @@
 "use client";
+
 import { useAppContext } from "@/context/app-context-";
 import { useFilter } from "@/hooks/useFilters";
 import {
@@ -12,17 +13,16 @@ import {
 import React from "react";
 
 const RestaurantMain = () => {
-  const { menus, categorys } = useAppContext();
-const {filter}=useFilter(menus)  
+  const { initialMenus, initialCategories } = useAppContext();
+const {filter}=useFilter(initialMenus)  
 const {bebidas,entrantes,platos_principales,postres} = filter()
-
 
   return (
     <main className="flex-grow w-full max-w-[1280px] mx-auto px-4 lg:px-12 py-8 relative">
       {/* <!--  Sticky Sub-Navigation --> */}
       <div className="sticky top-[61px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm pt-2 pb-4 mb-8 border-b border-[#392f28]/30">
         <nav className="flex overflow-x-auto scrollbar-hide gap-2 md:gap-4 md:justify-center">
-          {categorys?.map((category) => (
+          {initialCategories?.map((category) => (
             <a
               key={category._id}
               className="flex-shrink-0 px-6 py-2 rounded-full bg-[#392f28] text-muted text-sm font-bold shadow-lg shadow-primary/20 transition-transform hover:bg-[#4a3e36]"
@@ -31,30 +31,6 @@ const {bebidas,entrantes,platos_principales,postres} = filter()
               {category.name}
             </a>
           ))}
-          {/* <a
-            className="flex-shrink-0 px-6 py-2 rounded-full bg-[#392f28] text-muted text-sm font-bold shadow-lg shadow-primary/20 transition-transform hover:bg-[#4a3e36]"
-            href="#entrantes"
-          >
-            Entrantes
-          </a>
-          <a
-            className="flex-shrink-0 px-6 py-2 rounded-full bg-[#392f28] text-white/70 hover:text-white hover:bg-[#4a3e36] text-sm font-bold transition-all"
-            href="#principales"
-          >
-            Platos Principales
-          </a>
-          <a
-            className="flex-shrink-0 px-6 py-2 rounded-full bg-[#392f28] text-white/70 hover:text-white hover:bg-[#4a3e36] text-sm font-bold transition-all"
-            href="#postres"
-          >
-            Postres
-          </a>
-          <a
-            className="flex-shrink-0 px-6 py-2 rounded-full bg-[#392f28] text-white/70 hover:text-white hover:bg-[#4a3e36] text-sm font-bold transition-all"
-            href="#bebidas"
-          >
-            Vinos y Bebidas
-          </a> */}
         </nav>
       </div>
       {/* <!--  Menu Sections --> */}

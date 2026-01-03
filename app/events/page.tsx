@@ -1,9 +1,9 @@
-import Restaurant from '@/view/Events'
+import EventsPage from '@/view/EventsPage'
 import React from 'react'
 
 const page = () => {
   return (
-    <Restaurant />
+    <EventsPage />
   )
 }
 
